@@ -1,11 +1,12 @@
 #include <stdio.h>
-
+#include <locale.h>
 void frac(float Numero, int *Inteiro, float *Fracionario) {
     *Inteiro = (int)Numero;                     // Armazena a parte inteira
     *Fracionario = Numero - *Inteiro;            // Calcula a parte fracionária
 }
 
 int main() {
+    setlocale(LC_ALL, "Portuguese");
     float numero, parteFracionaria;
     int parteInteira;
 

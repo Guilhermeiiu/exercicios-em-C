@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <stdio.h>
+#include <locale.h>
 int compararMaior(int num1, int num2){
     if(num1>num2){
         return num1;
@@ -19,6 +19,7 @@ int compararMenor(int num1, int num2){
 }
 
 int main(){
+    setlocale(LC_ALL, "Portuguese");
     int num1,num2;
     printf("Escreva dois números:\n");
     scanf("%d %d",&num1, &num2);

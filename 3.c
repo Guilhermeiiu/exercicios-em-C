@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <locale.h>
 void somar(float num1, float num2, float *resultado) {
     *resultado = num1 + num2;          
 }
@@ -17,15 +17,15 @@ void dividir(float num1, float num2, float *resultado) {
         *resultado = num1 / num2;
     } else {
         printf("Erro: Divisão por zero.\n");
-        *resultado = 0; // Define um valor padrão para evitar problemas
+        *resultado = 0; 
     }
 }
 
 int main() {
+    setlocale(LC_ALL, "Portuguese");
     float num1, num2, resultado;
     char operacao;
 
-    // Entrada do usuário
     printf("Digite um número inicial: ");
     scanf("%f", &num1);
 
@@ -40,7 +40,6 @@ int main() {
         printf("Digite o próximo número: ");
         scanf("%f", &num2);
 
-        // Escolhe a operação
         if (operacao == '+') {
             somar(num1, num2, &resultado);
         } else if (operacao == '-') {

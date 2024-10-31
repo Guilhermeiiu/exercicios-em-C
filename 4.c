@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <locale.h>
 int urna() {
     int voto;
     do {
@@ -24,18 +24,17 @@ int urna() {
 }
 
 int main() {
+    setlocale(LC_ALL, "Portuguese");
     int voto, totalVotos = 0;
     int votosJoaquim = 0, votosMariana = 0, votosNulo = 0, votosBranco = 0;
 
-    // Processamento dos votos
     while (1) {
         voto = urna();
         
         if (voto == 5) {
-            break;  // Sai do loop se o usuário digitar 5 para relatório
+            break;  
         }
 
-        // Contabilização dos votos
         totalVotos++;
         switch (voto) {
             case 1:
