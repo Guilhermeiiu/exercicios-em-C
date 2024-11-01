@@ -11,7 +11,6 @@ void preencherVetor(int vetor[]) {
     }
 }
 
-// Fun√ß√£o para ordenar um vetor em ordem crescente (utiliza o algoritmo de bolha)
 void ordenarVetor(int vetor[]) {
     int i, j, aux;
     for (i = 0; i < TAMANHO - 1; i++) {
@@ -36,12 +35,12 @@ int main() {
 
     preencherVetor(numeros);
 
-    printf("Vetor antes da ordena√ß√£o:\n");
+    printf("Vetor antes da ordenaÁ„o:\n");
     imprimirVetor(numeros);
 
     ordenarVetor(numeros);
 
-    printf("Vetor ap√≥s a ordena√ß√£o:\n");
+    printf("Vetor apÛs a ordenaÁ„o:\n");
     imprimirVetor(numeros);
 
     return 0;

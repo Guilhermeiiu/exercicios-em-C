@@ -52,11 +52,11 @@ int main() {
         }
     }
 
-    // Cálculo das porcentagens
+
     float percNulos = (totalVotos > 0) ? (votosNulo / (float)totalVotos) * 100 : 0;
     float percBrancos = (totalVotos > 0) ? (votosBranco / (float)totalVotos) * 100 : 0;
 
-    // Determinação do vencedor
+ 
     char vencedor[50];
     if (votosJoaquim > votosMariana) {
         sprintf(vencedor, "Joaquim Manoel Andrade");
@@ -66,7 +66,7 @@ int main() {
         sprintf(vencedor, "Empate");
     }
 
-    // Exibição do relatório final
+  
     printf("\n----------------- RELATÓRIO -----------------\n");
     printf("Total de votos registrados: %d\n", totalVotos);
     printf("Votos para Joaquim Manoel Andrade: %d\n", votosJoaquim);
